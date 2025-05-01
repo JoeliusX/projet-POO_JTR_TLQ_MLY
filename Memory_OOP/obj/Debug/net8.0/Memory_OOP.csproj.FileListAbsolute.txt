@@ -1,0 +1,14 @@
+C:\Users\px80gjy\source\repos\Memory_OOP\Memory_OOP\bin\Debug\net8.0\Memory_OOP.exe
+C:\Users\px80gjy\source\repos\Memory_OOP\Memory_OOP\bin\Debug\net8.0\Memory_OOP.deps.json
+C:\Users\px80gjy\source\repos\Memory_OOP\Memory_OOP\bin\Debug\net8.0\Memory_OOP.runtimeconfig.json
+C:\Users\px80gjy\source\repos\Memory_OOP\Memory_OOP\bin\Debug\net8.0\Memory_OOP.dll
+C:\Users\px80gjy\source\repos\Memory_OOP\Memory_OOP\bin\Debug\net8.0\Memory_OOP.pdb
+C:\Users\px80gjy\source\repos\Memory_OOP\Memory_OOP\obj\Debug\net8.0\Memory_OOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\px80gjy\source\repos\Memory_OOP\Memory_OOP\obj\Debug\net8.0\Memory_OOP.AssemblyInfoInputs.cache
+C:\Users\px80gjy\source\repos\Memory_OOP\Memory_OOP\obj\Debug\net8.0\Memory_OOP.AssemblyInfo.cs
+C:\Users\px80gjy\source\repos\Memory_OOP\Memory_OOP\obj\Debug\net8.0\Memory_OOP.csproj.CoreCompileInputs.cache
+C:\Users\px80gjy\source\repos\Memory_OOP\Memory_OOP\obj\Debug\net8.0\Memory_OOP.dll
+C:\Users\px80gjy\source\repos\Memory_OOP\Memory_OOP\obj\Debug\net8.0\refint\Memory_OOP.dll
+C:\Users\px80gjy\source\repos\Memory_OOP\Memory_OOP\obj\Debug\net8.0\Memory_OOP.pdb
+C:\Users\px80gjy\source\repos\Memory_OOP\Memory_OOP\obj\Debug\net8.0\Memory_OOP.genruntimeconfig.cache
+C:\Users\px80gjy\source\repos\Memory_OOP\Memory_OOP\obj\Debug\net8.0\ref\Memory_OOP.dll
