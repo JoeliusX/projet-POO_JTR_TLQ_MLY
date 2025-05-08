@@ -1,0 +1,14 @@
+C:\Users\pp31imm\source\repos\Program_test\obj\Debug\net8.0\Streaming.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pp31imm\source\repos\Program_test\obj\Debug\net8.0\Streaming.AssemblyInfoInputs.cache
+C:\Users\pp31imm\source\repos\Program_test\obj\Debug\net8.0\Streaming.AssemblyInfo.cs
+C:\Users\pp31imm\source\repos\Program_test\obj\Debug\net8.0\Streaming.csproj.CoreCompileInputs.cache
+C:\Users\pp31imm\source\repos\Program_test\bin\Debug\net8.0\Streaming.exe
+C:\Users\pp31imm\source\repos\Program_test\bin\Debug\net8.0\Streaming.deps.json
+C:\Users\pp31imm\source\repos\Program_test\bin\Debug\net8.0\Streaming.runtimeconfig.json
+C:\Users\pp31imm\source\repos\Program_test\bin\Debug\net8.0\Streaming.dll
+C:\Users\pp31imm\source\repos\Program_test\bin\Debug\net8.0\Streaming.pdb
+C:\Users\pp31imm\source\repos\Program_test\obj\Debug\net8.0\Streaming.dll
+C:\Users\pp31imm\source\repos\Program_test\obj\Debug\net8.0\refint\Streaming.dll
+C:\Users\pp31imm\source\repos\Program_test\obj\Debug\net8.0\Streaming.pdb
+C:\Users\pp31imm\source\repos\Program_test\obj\Debug\net8.0\Streaming.genruntimeconfig.cache
+C:\Users\pp31imm\source\repos\Program_test\obj\Debug\net8.0\ref\Streaming.dll

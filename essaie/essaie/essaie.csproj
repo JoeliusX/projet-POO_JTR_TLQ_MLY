@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="C:\Users\pp31imm\OneDrive - Education Vaud\Bureau\I-320 %28Csharp%29\exercice1_calculatrice.cs" Link="exercice1_calculatrice.cs" />
+  </ItemGroup>
+
+</Project>

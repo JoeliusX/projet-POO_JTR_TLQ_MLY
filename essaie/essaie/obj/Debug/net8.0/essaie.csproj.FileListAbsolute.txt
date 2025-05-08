@@ -1,0 +1,14 @@
+C:\Users\pp31imm\source\repos\essaie\essaie\bin\Debug\net8.0\essaie.exe
+C:\Users\pp31imm\source\repos\essaie\essaie\bin\Debug\net8.0\essaie.deps.json
+C:\Users\pp31imm\source\repos\essaie\essaie\bin\Debug\net8.0\essaie.runtimeconfig.json
+C:\Users\pp31imm\source\repos\essaie\essaie\bin\Debug\net8.0\essaie.dll
+C:\Users\pp31imm\source\repos\essaie\essaie\bin\Debug\net8.0\essaie.pdb
+C:\Users\pp31imm\source\repos\essaie\essaie\obj\Debug\net8.0\essaie.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pp31imm\source\repos\essaie\essaie\obj\Debug\net8.0\essaie.AssemblyInfoInputs.cache
+C:\Users\pp31imm\source\repos\essaie\essaie\obj\Debug\net8.0\essaie.AssemblyInfo.cs
+C:\Users\pp31imm\source\repos\essaie\essaie\obj\Debug\net8.0\essaie.csproj.CoreCompileInputs.cache
+C:\Users\pp31imm\source\repos\essaie\essaie\obj\Debug\net8.0\essaie.dll
+C:\Users\pp31imm\source\repos\essaie\essaie\obj\Debug\net8.0\refint\essaie.dll
+C:\Users\pp31imm\source\repos\essaie\essaie\obj\Debug\net8.0\essaie.pdb
+C:\Users\pp31imm\source\repos\essaie\essaie\obj\Debug\net8.0\essaie.genruntimeconfig.cache
+C:\Users\pp31imm\source\repos\essaie\essaie\obj\Debug\net8.0\ref\essaie.dll

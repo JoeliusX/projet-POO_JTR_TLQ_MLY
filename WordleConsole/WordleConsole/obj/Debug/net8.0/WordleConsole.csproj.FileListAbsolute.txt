@@ -1,0 +1,42 @@
+C:\Users\pk37fki\OneDrive - Education Vaud\Cours\2024-2025\ICT-320\semaine 4\WordleConsole\WordleConsole\obj\Debug\net8.0\WordleConsole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pk37fki\OneDrive - Education Vaud\Cours\2024-2025\ICT-320\semaine 4\WordleConsole\WordleConsole\obj\Debug\net8.0\WordleConsole.AssemblyInfoInputs.cache
+C:\Users\pk37fki\OneDrive - Education Vaud\Cours\2024-2025\ICT-320\semaine 4\WordleConsole\WordleConsole\obj\Debug\net8.0\WordleConsole.AssemblyInfo.cs
+C:\Users\pk37fki\OneDrive - Education Vaud\Cours\2024-2025\ICT-320\semaine 4\WordleConsole\WordleConsole\obj\Debug\net8.0\WordleConsole.csproj.CoreCompileInputs.cache
+C:\Users\pk37fki\OneDrive - Education Vaud\Cours\2024-2025\ICT-320\semaine 4\WordleConsole\WordleConsole\bin\Debug\net8.0\WordleConsole.exe
+C:\Users\pk37fki\OneDrive - Education Vaud\Cours\2024-2025\ICT-320\semaine 4\WordleConsole\WordleConsole\bin\Debug\net8.0\WordleConsole.deps.json
+C:\Users\pk37fki\OneDrive - Education Vaud\Cours\2024-2025\ICT-320\semaine 4\WordleConsole\WordleConsole\bin\Debug\net8.0\WordleConsole.runtimeconfig.json
+C:\Users\pk37fki\OneDrive - Education Vaud\Cours\2024-2025\ICT-320\semaine 4\WordleConsole\WordleConsole\bin\Debug\net8.0\WordleConsole.dll
+C:\Users\pk37fki\OneDrive - Education Vaud\Cours\2024-2025\ICT-320\semaine 4\WordleConsole\WordleConsole\bin\Debug\net8.0\WordleConsole.pdb
+C:\Users\pk37fki\OneDrive - Education Vaud\Cours\2024-2025\ICT-320\semaine 4\WordleConsole\WordleConsole\obj\Debug\net8.0\WordleConsole.dll
+C:\Users\pk37fki\OneDrive - Education Vaud\Cours\2024-2025\ICT-320\semaine 4\WordleConsole\WordleConsole\obj\Debug\net8.0\refint\WordleConsole.dll
+C:\Users\pk37fki\OneDrive - Education Vaud\Cours\2024-2025\ICT-320\semaine 4\WordleConsole\WordleConsole\obj\Debug\net8.0\WordleConsole.pdb
+C:\Users\pk37fki\OneDrive - Education Vaud\Cours\2024-2025\ICT-320\semaine 4\WordleConsole\WordleConsole\obj\Debug\net8.0\WordleConsole.genruntimeconfig.cache
+C:\Users\pk37fki\OneDrive - Education Vaud\Cours\2024-2025\ICT-320\semaine 4\WordleConsole\WordleConsole\obj\Debug\net8.0\ref\WordleConsole.dll
+\\Mac\Home\Documents\Cours\ICT-320\semaine 4\WordleConsole\WordleConsole\bin\Debug\net8.0\WordleConsole.exe
+\\Mac\Home\Documents\Cours\ICT-320\semaine 4\WordleConsole\WordleConsole\bin\Debug\net8.0\WordleConsole.deps.json
+\\Mac\Home\Documents\Cours\ICT-320\semaine 4\WordleConsole\WordleConsole\bin\Debug\net8.0\WordleConsole.runtimeconfig.json
+\\Mac\Home\Documents\Cours\ICT-320\semaine 4\WordleConsole\WordleConsole\bin\Debug\net8.0\WordleConsole.dll
+\\Mac\Home\Documents\Cours\ICT-320\semaine 4\WordleConsole\WordleConsole\bin\Debug\net8.0\WordleConsole.pdb
+\\Mac\Home\Documents\Cours\ICT-320\semaine 4\WordleConsole\WordleConsole\obj\Debug\net8.0\WordleConsole.GeneratedMSBuildEditorConfig.editorconfig
+\\Mac\Home\Documents\Cours\ICT-320\semaine 4\WordleConsole\WordleConsole\obj\Debug\net8.0\WordleConsole.AssemblyInfoInputs.cache
+\\Mac\Home\Documents\Cours\ICT-320\semaine 4\WordleConsole\WordleConsole\obj\Debug\net8.0\WordleConsole.AssemblyInfo.cs
+\\Mac\Home\Documents\Cours\ICT-320\semaine 4\WordleConsole\WordleConsole\obj\Debug\net8.0\WordleConsole.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\Cours\ICT-320\semaine 4\WordleConsole\WordleConsole\obj\Debug\net8.0\WordleConsole.dll
+\\Mac\Home\Documents\Cours\ICT-320\semaine 4\WordleConsole\WordleConsole\obj\Debug\net8.0\refint\WordleConsole.dll
+\\Mac\Home\Documents\Cours\ICT-320\semaine 4\WordleConsole\WordleConsole\obj\Debug\net8.0\WordleConsole.pdb
+\\Mac\Home\Documents\Cours\ICT-320\semaine 4\WordleConsole\WordleConsole\obj\Debug\net8.0\WordleConsole.genruntimeconfig.cache
+\\Mac\Home\Documents\Cours\ICT-320\semaine 4\WordleConsole\WordleConsole\obj\Debug\net8.0\ref\WordleConsole.dll
+C:\Users\pp31imm\source\repos\WordleConsole\WordleConsole\bin\Debug\net8.0\WordleConsole.exe
+C:\Users\pp31imm\source\repos\WordleConsole\WordleConsole\bin\Debug\net8.0\WordleConsole.deps.json
+C:\Users\pp31imm\source\repos\WordleConsole\WordleConsole\bin\Debug\net8.0\WordleConsole.runtimeconfig.json
+C:\Users\pp31imm\source\repos\WordleConsole\WordleConsole\bin\Debug\net8.0\WordleConsole.dll
+C:\Users\pp31imm\source\repos\WordleConsole\WordleConsole\bin\Debug\net8.0\WordleConsole.pdb
+C:\Users\pp31imm\source\repos\WordleConsole\WordleConsole\obj\Debug\net8.0\WordleConsole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pp31imm\source\repos\WordleConsole\WordleConsole\obj\Debug\net8.0\WordleConsole.AssemblyInfoInputs.cache
+C:\Users\pp31imm\source\repos\WordleConsole\WordleConsole\obj\Debug\net8.0\WordleConsole.AssemblyInfo.cs
+C:\Users\pp31imm\source\repos\WordleConsole\WordleConsole\obj\Debug\net8.0\WordleConsole.csproj.CoreCompileInputs.cache
+C:\Users\pp31imm\source\repos\WordleConsole\WordleConsole\obj\Debug\net8.0\WordleConsole.dll
+C:\Users\pp31imm\source\repos\WordleConsole\WordleConsole\obj\Debug\net8.0\refint\WordleConsole.dll
+C:\Users\pp31imm\source\repos\WordleConsole\WordleConsole\obj\Debug\net8.0\WordleConsole.pdb
+C:\Users\pp31imm\source\repos\WordleConsole\WordleConsole\obj\Debug\net8.0\WordleConsole.genruntimeconfig.cache
+C:\Users\pp31imm\source\repos\WordleConsole\WordleConsole\obj\Debug\net8.0\ref\WordleConsole.dll
