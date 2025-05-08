@@ -29,5 +29,10 @@ namespace Memory_WPF_OOP
         {
 
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
