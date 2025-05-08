@@ -9,8 +9,14 @@
       Title="Menu">
 
     <Grid>
+<<<<<<< HEAD
         <Button Content="Start" HorizontalAlignment="Left" Margin="357,393,0,0" VerticalAlignment="Top" Click="Button_Click" RenderTransformOrigin="0.508,0.627"/>
         <TextBox HorizontalAlignment="Left" Margin="415,395,0,0" TextWrapping="Wrap" Text="Pseudo" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.507,0.62" TextChanged="TextBox_TextChanged"/>
+=======
+        <Button x:Name="startButton" Content="Start" HorizontalAlignment="Left" Margin="295,394,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <TextBox x:Name="pseudoText" HorizontalAlignment="Center" Margin="0,394,0,0" TextWrapping="Wrap" Text="Pseudo" VerticalAlignment="Top" Width="120"/>
+        <Image x:Name="background" Source="/ChatGPT Image 10 avr. 2025, 15_16_54.png" Stretch="Fill" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Panel.ZIndex="-1"/>
+>>>>>>> 15ce0dcf45b84de3c87357df436e3128b9e55476
 
     </Grid>
 </Page>
