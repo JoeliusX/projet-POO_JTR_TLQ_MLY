@@ -34,5 +34,10 @@ namespace Memory_WPF_OOP
         {
 
         }
+
+        private void pseudoText_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
