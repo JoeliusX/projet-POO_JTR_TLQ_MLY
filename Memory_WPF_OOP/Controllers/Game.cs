@@ -33,19 +33,17 @@ namespace Memory_WPF_OOP.Controllers
         {
             if (chosenCart1 == null || chosenCart2 == null)
             {
-                if (chosenCart1 == null || chosenCart2 == null)
-                {
-                    status = "undefined";
-                }
-                else if (chosenCart1 == chosenCart2)
-                {
-                    status = "correct";
-                }
-                else
-                {
-                    status = "wrong";
-                }
+                status = "undefined";
+            }
+            else if (Cards[(int)chosenCart1] == Cards[(int)chosenCart2])
+            {
+                status = "correct";
+            }
+            else
+            {
+                status = "wrong";
             }
         }
+
     }
 }

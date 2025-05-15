@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Memory_WPF_OOP.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,17 +19,24 @@ namespace Memory_WPF_OOP
     /// <summary>
     /// Interaction logic for Menu.xaml
     /// </summary>
+    /// 
     public partial class Menu : Page
     {
+        private Game game;
         public Menu()
         {
             InitializeComponent();
+            game = new Game();
             LoadGrid();
         }
 
         private void Image_Click(object sender, RoutedEventArgs e)
         {
-            System.Console.WriteLine("TEST");
+            Button clickedButton = sender as Button;
+            int index = (int)clickedButton.Tag;
+
+            game.Choose(index); // Choisir une carte
+            Console.WriteLine("Statut : " + game.status);
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
