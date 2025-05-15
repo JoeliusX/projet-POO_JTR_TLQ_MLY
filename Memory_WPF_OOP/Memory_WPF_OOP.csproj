@@ -107,7 +107,7 @@
   <ItemGroup>
     <Content Include=".gitignore" />
     <Resource Include="Pictures\CardBack.png" />
-    <Resource Include="ChatGPT Image 10 avr. 2025, 15_16_54.png" />
+    <Resource Include="Pictures\ChatGPT Image 10 avr. 2025, 15_16_54.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

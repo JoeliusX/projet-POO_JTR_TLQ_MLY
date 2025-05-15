@@ -47,13 +47,9 @@ namespace Memory_WPF_OOP
                 Button cardButton = new Button
                 {
                     Margin = new Thickness(10),
-                    Padding = new Thickness(0),
-                    Background = Brushes.Transparent,
-                    BorderBrush = Brushes.Transparent,
-                    HorizontalContentAlignment = HorizontalAlignment.Stretch,
-                    VerticalContentAlignment = VerticalAlignment.Stretch
+                    VerticalContentAlignment = VerticalAlignment.Stretch,
+                    HorizontalContentAlignment = HorizontalAlignment.Stretch
                 };
-
                 Image image = new Image
                 {
                     Source = new BitmapImage(new Uri("pack://application:,,,/Pictures/CardBack.png")),
@@ -61,7 +57,6 @@ namespace Memory_WPF_OOP
                 };
 
                 cardButton.Content = image;
-
                 CardGrid.Children.Add(cardButton);
             }
         }
