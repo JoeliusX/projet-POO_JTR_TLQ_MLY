@@ -106,6 +106,30 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Resource Include="Pictures\dragon_1.jpg" />
+    <Resource Include="Pictures\dragon_2.jpg" />
+    <Resource Include="Pictures\dragon_3.jpg" />
+    <Resource Include="Pictures\dragon_4.jpg" />
+    <Resource Include="Pictures\dragon_5.jpg" />
+    <Resource Include="Pictures\dragon_6.jpg" />
+    <Resource Include="Pictures\dragon_7.jpg" />
+    <Resource Include="Pictures\dragon_8.jpg" />
+    <Resource Include="Pictures\insecte_1.jpg" />
+    <Resource Include="Pictures\insecte_2.jpg" />
+    <Resource Include="Pictures\insecte_3.jpg" />
+    <Resource Include="Pictures\insecte_4.jpg" />
+    <Resource Include="Pictures\insecte_5.jpg" />
+    <Resource Include="Pictures\insecte_6.jpg" />
+    <Resource Include="Pictures\insecte_7.jpg" />
+    <Resource Include="Pictures\insecte_8.jpg" />
+    <Resource Include="Pictures\monstre_1.jpg" />
+    <Resource Include="Pictures\monstre_2.jpg" />
+    <Resource Include="Pictures\monstre_3.jpg" />
+    <Resource Include="Pictures\monstre_4.jpg" />
+    <Resource Include="Pictures\monstre_5.jpg" />
+    <Resource Include="Pictures\monstre_6.jpg" />
+    <Resource Include="Pictures\monstre_7.jpg" />
+    <Resource Include="Pictures\monstre_8.jpg" />
     <Resource Include="Pictures\CardBack.png" />
     <Resource Include="Pictures\ChatGPT Image 10 avr. 2025, 15_16_54.png" />
   </ItemGroup>

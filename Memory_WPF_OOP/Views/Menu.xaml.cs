@@ -26,9 +26,9 @@ namespace Memory_WPF_OOP
             LoadGrid();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Image_Click(object sender, RoutedEventArgs e)
         {
-
+            System.Console.WriteLine("TEST");
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -57,6 +57,7 @@ namespace Memory_WPF_OOP
                 };
 
                 cardButton.Content = image;
+                cardButton.Click += new RoutedEventHandler(Image_Click);
                 CardGrid.Children.Add(cardButton);
             }
         }
