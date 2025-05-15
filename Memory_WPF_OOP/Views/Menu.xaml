@@ -9,8 +9,9 @@
       Title="Menu">
 
     <Grid>
-        <Button x:Name="startButton" Content="Start" HorizontalAlignment="Left" Margin="708,764,0,0" VerticalAlignment="Top" Click="Button_Click" Height="40" Width="40"/>
-        <TextBox x:Name="pseudoText" HorizontalAlignment="Left" Margin="821,764,0,0" Text="Pseudo" VerticalAlignment="Top" Width="140" Height="40" TextChanged="pseudoText_TextChanged" TextWrapping="Wrap"/>
+        <UniformGrid x:Name="CardGrid" Rows="4" Columns="8" Margin="100,100,100,50" HorizontalAlignment="Center" VerticalAlignment="Top" Width="1000" Height="690"/>
+        <Button x:Name="startButton" Content="Start" HorizontalAlignment="Left" Margin="708,800,0,0" VerticalAlignment="Top" Click="Button_Click" Height="40" Width="40"/>
+        <TextBox x:Name="pseudoText" HorizontalAlignment="Left" Margin="821,800,0,0" Text="Pseudo" VerticalAlignment="Top" Width="140" Height="40" TextChanged="pseudoText_TextChanged" TextWrapping="Wrap"/>
         <Image x:Name="background" Source="/ChatGPT Image 10 avr. 2025, 15_16_54.png" Stretch="Fill" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Panel.ZIndex="-1"/>
     </Grid>
 </Page>

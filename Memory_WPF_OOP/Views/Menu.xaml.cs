@@ -23,6 +23,7 @@ namespace Memory_WPF_OOP
         public Menu()
         {
             InitializeComponent();
+            LoadGrid();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -38,6 +39,31 @@ namespace Memory_WPF_OOP
         private void pseudoText_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+        private void LoadGrid()
+        {
+            for (int i = 0; i < 32; i++)
+            {
+                Button cardButton = new Button
+                {
+                    Margin = new Thickness(10),
+                    Padding = new Thickness(0),
+                    Background = Brushes.Transparent,
+                    BorderBrush = Brushes.Transparent,
+                    HorizontalContentAlignment = HorizontalAlignment.Stretch,
+                    VerticalContentAlignment = VerticalAlignment.Stretch
+                };
+
+                Image image = new Image
+                {
+                    Source = new BitmapImage(new Uri("pack://application:,,,/Pictures/CardBack.png")),
+                    Stretch = Stretch.UniformToFill
+                };
+
+                cardButton.Content = image;
+
+                CardGrid.Children.Add(cardButton);
+            }
         }
     }
 }
