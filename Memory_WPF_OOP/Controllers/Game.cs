@@ -1,12 +1,51 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Memory_WPF_OOP.Controllers
 {
     internal class Game
     {
+        public List<int> Cards { get; private set; }
+        public int? chosenCart1 { get; private set; }
+        public int? chosenCart2 { get; private set; }
+        public string status { get; private set; }
+
+        public void Choose(int index)
+        {
+            if (chosenCart1 == index || chosenCart2 == index)
+            {
+                chosenCart2 = null;
+            }
+
+            if (chosenCart1 == null)
+            {
+                chosenCart1 = index;
+                return;
+            }
+            if (chosenCart2 == null)
+            {
+                chosenCart2 = index;
+                CheckStatus();
+            }
+
+        }
+        public void CheckStatus()
+        {
+            if (chosenCart1 == null || chosenCart2 == null)
+            {
+                if (chosenCart1 == null || chosenCart2 == null)
+                {
+                    status = "undefined";
+                }
+                else if (chosenCart1 == chosenCart2)
+                {
+                    status = "correct";
+                }
+                else
+                {
+                    status = "wrong";
+                }
+            }
+        }
     }
 }
