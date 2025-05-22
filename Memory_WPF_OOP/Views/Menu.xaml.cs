@@ -83,5 +83,25 @@ namespace Memory_WPF_OOP
                 cardButtons.Add(cardButton);
             }
         }
+
+        private void restartButton_Click(object sender, RoutedEventArgs e)
+        {
+            game.Restart();
+
+            for (int i = 0; i < cardButtons.Count; i++)
+            {
+                var button = cardButtons[i];
+
+                // Réinitialiser la carte à son dos
+                Image image = new Image
+                {
+                    Source = new BitmapImage(new Uri("pack://application:,,,/CardBack.png")),
+                    Stretch = Stretch.UniformToFill
+                };
+
+                button.Content = image;
+                button.IsEnabled = true;
+            }
+        }
     }
 }
