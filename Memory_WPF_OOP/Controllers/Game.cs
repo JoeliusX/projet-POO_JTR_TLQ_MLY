@@ -20,6 +20,13 @@ namespace Memory_WPF_OOP.Controllers
             chosenCart2 = null;
             status = "undefined";
         }
+        public void Restart()
+        {
+            Cards = GenerateCards();
+            chosenCart1 = null;
+            chosenCart2 = null;
+            status = "undefined";
+        }
 
         private List<string> GenerateCards()
         {
