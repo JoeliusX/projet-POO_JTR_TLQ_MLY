@@ -38,7 +38,7 @@ namespace Memory_WPF_OOP
 
             game.Choose(index); // Choisir une carte
 
-            string imageFileName = game.Cards[index];
+            var imageFileName = game.Cards[index];
             string imagePath = $"pack://application:,,,/Pictures/{imageFileName}";
 
             Image image = new Image

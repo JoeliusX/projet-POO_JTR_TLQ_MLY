@@ -23,11 +23,11 @@ namespace Memory_WPF_OOP.Controllers
 
         private List<string> GenerateCards()
         {
-            string dossierImages = @"C:\cours\projet_POO\projet-POO_JTR_TLQ_MLY\Memory_WPF_OOP\Pictures";
+            string dossierImages = "../../Pictures";
 
 
             // Charge tous les fichiers image du dossier
-            var images = Directory.GetFiles(dossierImages, "*.png")
+            var images = Directory.GetFiles(dossierImages, "*.jpg")
                                   .Select(Path.GetFileName)
                                   .ToList();
 
@@ -47,13 +47,13 @@ namespace Memory_WPF_OOP.Controllers
             if (chosenCart1 == null)
             {
                 chosenCart1 = index;
-                return;
             }
             if (chosenCart2 == null)
             {
                 chosenCart2 = index;
-                CheckStatus();
             }
+            CheckStatus();
+            
 
         }
         public void CheckStatus()
