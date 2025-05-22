@@ -24,6 +24,7 @@ namespace Memory_WPF_OOP
     {
         private Game game;
         private List<Button> cardButtons;
+        private bool isChecking = false;
         public Menu()
         {
             InitializeComponent();
@@ -31,14 +32,19 @@ namespace Memory_WPF_OOP
             LoadGrid();
         }
 
-        private void Image_Click(object sender, RoutedEventArgs e)
+        private async void Image_Click(object sender, RoutedEventArgs e)
         {
+            if (isChecking) return;
+
             Button clickedButton = sender as Button;
             int index = (int)clickedButton.Tag;
 
+            if (clickedButton.Content is Image img && !img.Source.ToString().Contains("CardBack.png"))
+                return;
+
             game.Choose(index); // Choisir une carte
 
-            var imageFileName = game.Cards[index];
+            string imageFileName = game.Cards[index];
             string imagePath = $"pack://application:,,,/Pictures/{imageFileName}";
 
             Image image = new Image
@@ -48,6 +54,27 @@ namespace Memory_WPF_OOP
             };
 
             clickedButton.Content = image;
+
+            if (game.chosenCart1 != null && game.chosenCart2 != null)
+            {
+                isChecking = true;
+                await Task.Delay(2500);
+
+                if (game.status == "wrong")
+                {
+                    foreach (var i in new[] { game.chosenCart1.Value, game.chosenCart2.Value })
+                    {
+                        Image backImage = new Image
+                        {
+                            Source = new BitmapImage(new Uri("pack://application:,,,/CardBack.png")),
+                            Stretch = Stretch.UniformToFill
+                        };
+                        cardButtons[i].Content = backImage;
+                    }
+                }
+                game.ResetChoices();
+                isChecking = false;
+            }
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -91,8 +118,6 @@ namespace Memory_WPF_OOP
             for (int i = 0; i < cardButtons.Count; i++)
             {
                 var button = cardButtons[i];
-
-                // Réinitialiser la carte à son dos
                 Image image = new Image
                 {
                     Source = new BitmapImage(new Uri("pack://application:,,,/CardBack.png")),

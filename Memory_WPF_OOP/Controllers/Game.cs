@@ -46,23 +46,17 @@ namespace Memory_WPF_OOP.Controllers
 
         public void Choose(int index)
         {
-            if (chosenCart1 == index || chosenCart2 == index)
-            {
-                chosenCart2 = null;
-            }
-
             if (chosenCart1 == null)
             {
                 chosenCart1 = index;
             }
-            if (chosenCart2 == null)
+            else if (chosenCart2 == null && index != chosenCart1)
             {
                 chosenCart2 = index;
             }
             CheckStatus();
-            
-
         }
+
         public void CheckStatus()
         {
             if (chosenCart1 == null || chosenCart2 == null)
@@ -78,6 +72,11 @@ namespace Memory_WPF_OOP.Controllers
                 status = "wrong";
             }
         }
-
+        public void ResetChoices()
+        {
+            chosenCart1 = null;
+            chosenCart2 = null;
+            status = "undefined";
+        }
     }
 }
