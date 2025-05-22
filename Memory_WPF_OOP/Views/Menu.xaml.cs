@@ -23,6 +23,7 @@ namespace Memory_WPF_OOP
     public partial class Menu : Page
     {
         private Game game;
+        private List<Button> cardButtons;
         public Menu()
         {
             InitializeComponent();
@@ -36,7 +37,17 @@ namespace Memory_WPF_OOP
             int index = (int)clickedButton.Tag;
 
             game.Choose(index); // Choisir une carte
-            Console.WriteLine("Statut : " + game.status);
+
+            string imageFileName = game.Cards[index];
+            string imagePath = $"pack://application:,,,/Pictures/{imageFileName}";
+
+            Image image = new Image
+            {
+                Source = new BitmapImage(new Uri(imagePath)),
+                Stretch = Stretch.UniformToFill
+            };
+
+            clickedButton.Content = image;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -50,6 +61,7 @@ namespace Memory_WPF_OOP
         }
         private void LoadGrid()
         {
+            cardButtons = new List<Button>();
             for (int i = 0; i < 32; i++)
             {
                 Button cardButton = new Button
@@ -60,13 +72,15 @@ namespace Memory_WPF_OOP
                 };
                 Image image = new Image
                 {
-                    Source = new BitmapImage(new Uri("pack://application:,,,/Pictures/CardBack.png")),
+                    Source = new BitmapImage(new Uri("pack://application:,,,/CardBack.png")),
                     Stretch = Stretch.UniformToFill
                 };
 
                 cardButton.Content = image;
                 cardButton.Click += new RoutedEventHandler(Image_Click);
                 CardGrid.Children.Add(cardButton);
+                cardButton.Tag = i;
+                cardButtons.Add(cardButton);
             }
         }
     }

@@ -1,14 +1,41 @@
 ﻿
+using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace Memory_WPF_OOP.Controllers
 {
     internal class Game
     {
-        public List<int> Cards { get; private set; }
+        public List<string> Cards { get; private set; }
         public int? chosenCart1 { get; private set; }
         public int? chosenCart2 { get; private set; }
         public string status { get; private set; }
+
+        public Game()
+        {
+            Cards = GenerateCards();
+            chosenCart1 = null;
+            chosenCart2 = null;
+            status = "undefined";
+        }
+
+        private List<string> GenerateCards()
+        {
+            string dossierImages = @"C:\cours\projet_POO\projet-POO_JTR_TLQ_MLY\Memory_WPF_OOP\Pictures";
+
+
+            // Charge tous les fichiers image du dossier
+            var images = Directory.GetFiles(dossierImages, "*.png")
+                                  .Select(Path.GetFileName)
+                                  .ToList();
+
+            Random rng = new Random();
+            var shuffledImages = images.OrderBy(_ => rng.Next()).ToList();
+            var duplication = shuffledImages.Take(16).Concat(shuffledImages.Take(16)).ToList();
+            return duplication.OrderBy(_ => rng.Next()).ToList();
+        }
 
         public void Choose(int index)
         {

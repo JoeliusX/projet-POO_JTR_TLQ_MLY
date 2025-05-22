@@ -130,8 +130,8 @@
     <Resource Include="Pictures\monstre_6.jpg" />
     <Resource Include="Pictures\monstre_7.jpg" />
     <Resource Include="Pictures\monstre_8.jpg" />
-    <Resource Include="Pictures\CardBack.png" />
-    <Resource Include="Pictures\ChatGPT Image 10 avr. 2025, 15_16_54.png" />
+    <Resource Include="CardBack.png" />
+    <Resource Include="ChatGPT Image 10 avr. 2025, 15_16_54.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
