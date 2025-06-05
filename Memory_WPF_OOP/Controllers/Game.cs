@@ -14,15 +14,13 @@ namespace Memory_WPF_OOP.Controllers
         public string status { get; private set; }
         public int Score { get; private set; } = 0; // initialiserla variable du score
 
-<<<<<<< HEAD
+
 
 
         
-        // Création des cartes
-=======
-        // Création des cartes
 
->>>>>>> ddf6954d6e4558f734810d1d421aae454cf6634b
+
+        // Création des cartes
         public Game()
         {
             Cards = GenerateCards();
