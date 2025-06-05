@@ -17,6 +17,7 @@ namespace Memory_WPF_OOP
             {
                 connection.Open();
 
+                // Création de la table
                 using (var command = connection.CreateCommand())
                 {
                     command.CommandText = @"
