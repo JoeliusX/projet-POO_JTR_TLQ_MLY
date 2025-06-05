@@ -41,7 +41,11 @@ namespace Memory_WPF_OOP
                 return;
             }
 
-            pseudoText.Text = name;        
+            pseudoText.Text = name;
+
+            /*DatabaseService dbService = new DatabaseService();
+            dbService.InsertUser(name);*/
+
             NameOverlay.Visibility = Visibility.Collapsed;
         }
 
