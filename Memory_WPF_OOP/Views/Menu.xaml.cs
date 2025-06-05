@@ -58,10 +58,20 @@ namespace Memory_WPF_OOP
             if (clickedButton.Content is Image img && !img.Source.ToString().Contains("CardBack.png"))
                 return;
 
+<<<<<<< HEAD
             game.Choose(index);
 
             scoreText.Text = $"Score : {game.Score}";
             // Choisir une carte
+=======
+
+            game.Choose(index);
+
+            scoreText.Text = $"Score : {game.Score}";
+
+            // Choisir une carte
+            game.Choose(index);
+>>>>>>> ddf6954d6e4558f734810d1d421aae454cf6634b
 
             string imageFileName = game.Cards[index];
             string imagePath = $"pack://application:,,,/Pictures/{imageFileName}";
@@ -83,7 +93,15 @@ namespace Memory_WPF_OOP
             if (game.chosenCart1 != null && game.chosenCart2 != null)
             {
                 isChecking = true;
+<<<<<<< HEAD
                 await Task.Delay(1500);
+=======
+
+                await Task.Delay(2000);
+
+                await Task.Delay(1500);
+
+>>>>>>> ddf6954d6e4558f734810d1d421aae454cf6634b
 
                 // Retourner les cartes si elles ne sont pas correctes
                 if (game.status == "wrong")
@@ -132,7 +150,6 @@ namespace Memory_WPF_OOP
         }
         private void LoadGrid()
         {
-            // Donner de façon aléatoire une image à chaque carte entre les 32 images gardées
             cardButtons = new List<Button>();
             for (int i = 0; i < 32; i++)
             {
@@ -140,8 +157,10 @@ namespace Memory_WPF_OOP
                 {
                     Margin = new Thickness(10),
                     VerticalContentAlignment = VerticalAlignment.Stretch,
-                    HorizontalContentAlignment = HorizontalAlignment.Stretch
+                    HorizontalContentAlignment = HorizontalAlignment.Stretch,
+                    Style = (Style)FindResource("CardButtonStyle")  // ← ici on applique le style
                 };
+
                 Image image = new Image
                 {
                     Source = new BitmapImage(new Uri("pack://application:,,,/CardBack.png")),
@@ -153,11 +172,12 @@ namespace Memory_WPF_OOP
                 CardGrid.Children.Add(cardButton);
                 cardButton.Tag = i;
                 cardButtons.Add(cardButton);
+
                 cardButton.RenderTransformOrigin = new Point(0.5, 0.5);
                 cardButton.RenderTransform = new ScaleTransform(1, 1);
-
             }
         }
+
 
         private void restartButton_Click(object sender, RoutedEventArgs e)
         {
