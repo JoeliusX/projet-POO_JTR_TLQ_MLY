@@ -132,6 +132,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Resource Include="NamePage.png" />
     <Resource Include="Pictures\dragon_1.jpg" />
     <Resource Include="Pictures\dragon_2.jpg" />
     <Resource Include="Pictures\dragon_3.jpg" />
