@@ -12,15 +12,10 @@ namespace Memory_WPF_OOP.Controllers
         public int? chosenCart1 { get; private set; }
         public int? chosenCart2 { get; private set; }
         public string status { get; private set; }
-<<<<<<< HEAD
         public int Score { get; private set; } = 0; // initialiserla variable du score
 
-
-
-=======
-        
         // Création des cartes
->>>>>>> 73a4ec4353e48a12df6d4ee209e19ad1816c189c
+
         public Game()
         {
             Cards = GenerateCards();
@@ -79,11 +74,7 @@ namespace Memory_WPF_OOP.Controllers
             CheckStatus();
         }
 
-<<<<<<< HEAD
-
-=======
         // Compare les deux cartes choisies
->>>>>>> 73a4ec4353e48a12df6d4ee209e19ad1816c189c
         public void CheckStatus()
         {
             if (chosenCart1 == null || chosenCart2 == null)

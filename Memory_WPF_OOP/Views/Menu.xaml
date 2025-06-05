@@ -7,14 +7,13 @@
       mc:Ignorable="d" 
       d:DesignHeight="900" d:DesignWidth="1600"
       Title="Menu">
-<<<<<<< HEAD
 
     <Page.Resources>
         <Storyboard x:Key="FlipCardStoryboard">
             <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
                              From="1" To="0" Duration="0:0:0.15" AutoReverse="True"/>
         </Storyboard>
-        
+
         <Storyboard x:Key="PairFoundAnimation">
             <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
                      From="1" To="1.1" Duration="0:0:0.2" AutoReverse="True"/>
@@ -22,10 +21,37 @@
                      From="1" To="1.1" Duration="0:0:0.2" AutoReverse="True"/>
         </Storyboard>
 
+        <!-- Style pour les boutons cartes avec effet lumière au survol -->
+        <Style TargetType="Button" x:Key="CardButtonStyle">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Effect" Value="{x:Null}" />
+            <Setter Property="Cursor" Value="Arrow"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Effect">
+                        <Setter.Value>
+                            <DropShadowEffect Color="White" BlurRadius="15" ShadowDepth="0" Opacity="0.8"/>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="RenderTransform">
+                        <Setter.Value>
+                            <ScaleTransform ScaleX="1.05" ScaleY="1.05"/>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Cursor" Value="Arrow"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </Page.Resources>
 
-=======
->>>>>>> 73a4ec4353e48a12df6d4ee209e19ad1816c189c
     <Grid>
 
         <TextBlock x:Name="scoreText"
@@ -37,13 +63,15 @@
            Margin="0,20,0,0"/>
 
         <UniformGrid x:Name="CardGrid" Rows="4" Columns="8" Margin="100,100,100,50" HorizontalAlignment="Center" VerticalAlignment="Top" Width="1000" Height="690"/>
-        <Button x:Name="restartButton" Content="Restart" HorizontalAlignment="Left" Margin="698,800,0,0" VerticalAlignment="Top" Height="40" Width="85" Click="restartButton_Click"/>
-        <TextBox x:Name="pseudoText" HorizontalAlignment="Left" Margin="821,800,0,0" Text="Pseudo" VerticalAlignment="Top" Width="140" Height="40" TextChanged="pseudoText_TextChanged" TextWrapping="Wrap"/>
-        <Image x:Name="background" Source="/ChatGPT Image 10 avr. 2025, 15_16_54.png" Stretch="Fill" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Panel.ZIndex="-1"/>
-<<<<<<< HEAD
 
-=======
+        <Button x:Name="restartButton" Content="Restart" HorizontalAlignment="Left" Margin="698,800,0,0" VerticalAlignment="Top" Height="40" Width="85" Click="restartButton_Click"/>
+
+        <TextBox x:Name="pseudoText" HorizontalAlignment="Left" Margin="821,800,0,0" Text="Pseudo" VerticalAlignment="Top" Width="140" Height="40" TextChanged="pseudoText_TextChanged" TextWrapping="Wrap"/>
+
+        <Image x:Name="background" Source="/ChatGPT Image 10 avr. 2025, 15_16_54.png" Stretch="Fill" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Panel.ZIndex="-1"/>
+
         <TextBlock x:Name="VictoryText" Text="Victoire !" FontSize="50" FontWeight="Bold" Foreground="Green" Background="White" Padding="20" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" Panel.ZIndex="10"/>
+
         <Grid x:Name="NameOverlay" Background="#AA000000" Panel.ZIndex="100">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -52,20 +80,15 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid Width="400px" Height="150px">
-                <Image x:Name="backgroundPageName" 
-               Source="/NamePage.png"
-               Panel.ZIndex="-1"/>
-
+                <Image x:Name="backgroundPageName" Source="/NamePage.png" Panel.ZIndex="-1"/>
                 <StackPanel>
-                    <TextBlock Text="Enter your name" FontSize="16" FontWeight="Black" 
-                       Margin="0,10,0,15" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Enter your name" FontSize="16" FontWeight="Black" Margin="0,10,0,15" HorizontalAlignment="Center"/>
                     <TextBox x:Name="OverlayNameTextBox" Width="200" Margin="0,0,0,25"/>
-                    <Button Content="OK" Width="75" HorizontalAlignment="Center" 
-                    Click="NameOverlayOkButton_Click"/>
+                    <Button Content="OK" Width="75" HorizontalAlignment="Center" Click="NameOverlayOkButton_Click"/>
                 </StackPanel>
             </Grid>
         </Grid>
->>>>>>> 73a4ec4353e48a12df6d4ee209e19ad1816c189c
+
     </Grid>
-    
+
 </Page>
