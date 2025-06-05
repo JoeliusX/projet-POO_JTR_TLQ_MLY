@@ -58,20 +58,10 @@ namespace Memory_WPF_OOP
             if (clickedButton.Content is Image img && !img.Source.ToString().Contains("CardBack.png"))
                 return;
 
-<<<<<<< HEAD
-            game.Choose(index);
-
-            scoreText.Text = $"Score : {game.Score}";
-            // Choisir une carte
-=======
-
-            game.Choose(index);
-
             scoreText.Text = $"Score : {game.Score}";
 
             // Choisir une carte
             game.Choose(index);
->>>>>>> ddf6954d6e4558f734810d1d421aae454cf6634b
 
             string imageFileName = game.Cards[index];
             string imagePath = $"pack://application:,,,/Pictures/{imageFileName}";
@@ -93,15 +83,8 @@ namespace Memory_WPF_OOP
             if (game.chosenCart1 != null && game.chosenCart2 != null)
             {
                 isChecking = true;
-<<<<<<< HEAD
-                await Task.Delay(1500);
-=======
-
-                await Task.Delay(2000);
 
                 await Task.Delay(1500);
-
->>>>>>> ddf6954d6e4558f734810d1d421aae454cf6634b
 
                 // Retourner les cartes si elles ne sont pas correctes
                 if (game.status == "wrong")
