@@ -79,6 +79,17 @@ namespace Memory_WPF_OOP
                 }
                 game.ResetChoices();
                 isChecking = false;
+
+                // Vérification de si toutes les cartes sont justes
+                bool allCardsRevealed = cardButtons.All(btn =>
+                    btn.Content is Image cardImage &&
+                    !cardImage.Source.ToString().Contains("CardBack.png"));
+
+                if (allCardsRevealed)
+                {
+                    VictoryText.Visibility = Visibility.Visible;
+                }
+
             }
         }
 

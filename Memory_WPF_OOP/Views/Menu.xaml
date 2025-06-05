@@ -13,5 +13,6 @@
         <Button x:Name="restartButton" Content="Restart" HorizontalAlignment="Left" Margin="698,800,0,0" VerticalAlignment="Top" Height="40" Width="85" Click="restartButton_Click"/>
         <TextBox x:Name="pseudoText" HorizontalAlignment="Left" Margin="821,800,0,0" Text="Pseudo" VerticalAlignment="Top" Width="140" Height="40" TextChanged="pseudoText_TextChanged" TextWrapping="Wrap"/>
         <Image x:Name="background" Source="/ChatGPT Image 10 avr. 2025, 15_16_54.png" Stretch="Fill" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Panel.ZIndex="-1"/>
+        <TextBlock x:Name="VictoryText" Text="Victoire !" FontSize="50" FontWeight="Bold" Foreground="Green" Background="White" Padding="20" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" Panel.ZIndex="10"/>
     </Grid>
 </Page>
