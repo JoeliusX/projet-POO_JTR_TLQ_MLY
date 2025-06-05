@@ -12,7 +12,7 @@ namespace Memory_WPF_OOP.Controllers
         public int? chosenCart1 { get; private set; }
         public int? chosenCart2 { get; private set; }
         public string status { get; private set; }
-        public int Score { get; private set; } = 0;
+        public int Score { get; private set; } = 0; // initialiserla variable du score
 
 
         // Création des cartes

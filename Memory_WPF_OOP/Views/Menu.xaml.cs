@@ -42,7 +42,11 @@ namespace Memory_WPF_OOP
                 return;
             }
 
-            pseudoText.Text = name;        
+            pseudoText.Text = name;
+
+            /*DatabaseService dbService = new DatabaseService();
+            dbService.InsertUser(name);*/
+
             NameOverlay.Visibility = Visibility.Collapsed;
         }
 
@@ -83,7 +87,6 @@ namespace Memory_WPF_OOP
             if (game.chosenCart1 != null && game.chosenCart2 != null)
             {
                 isChecking = true;
-
                 await Task.Delay(1500);
 
                 // Retourner les cartes si elles ne sont pas correctes
@@ -160,7 +163,6 @@ namespace Memory_WPF_OOP
                 cardButton.RenderTransform = new ScaleTransform(1, 1);
             }
         }
-
 
         private void restartButton_Click(object sender, RoutedEventArgs e)
         {
