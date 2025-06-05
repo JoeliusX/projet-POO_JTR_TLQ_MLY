@@ -87,7 +87,7 @@ namespace Memory_WPF_OOP
             if (game.chosenCart1 != null && game.chosenCart2 != null)
             {
                 isChecking = true;
-                await Task.Delay(1500)
+                await Task.Delay(1500);
 
                 // Retourner les cartes si elles ne sont pas correctes
                 if (game.status == "wrong")
@@ -163,7 +163,6 @@ namespace Memory_WPF_OOP
                 cardButton.RenderTransform = new ScaleTransform(1, 1);
             }
         }
-x
 
         private void restartButton_Click(object sender, RoutedEventArgs e)
         {
