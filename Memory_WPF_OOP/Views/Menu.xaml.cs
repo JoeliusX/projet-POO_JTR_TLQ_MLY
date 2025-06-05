@@ -32,6 +32,19 @@ namespace Memory_WPF_OOP
             LoadGrid();
         }
 
+        private void NameOverlayOkButton_Click(object sender, RoutedEventArgs e)
+        {
+            string name = OverlayNameTextBox.Text.Trim();
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                MessageBox.Show("Enter your name");
+                return;
+            }
+
+            pseudoText.Text = name;        
+            NameOverlay.Visibility = Visibility.Collapsed;
+        }
+
         private async void Image_Click(object sender, RoutedEventArgs e)
         {
             if (isChecking) return;
