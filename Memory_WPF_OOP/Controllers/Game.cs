@@ -12,6 +12,9 @@ namespace Memory_WPF_OOP.Controllers
         public int? chosenCart1 { get; private set; }
         public int? chosenCart2 { get; private set; }
         public string status { get; private set; }
+        public int Score { get; private set; } = 0; // initialiserla variable du score
+
+
 
         public Game()
         {
@@ -26,6 +29,7 @@ namespace Memory_WPF_OOP.Controllers
             chosenCart1 = null;
             chosenCart2 = null;
             status = "undefined";
+            Score = 0;
         }
 
         private List<string> GenerateCards()
@@ -46,16 +50,27 @@ namespace Memory_WPF_OOP.Controllers
 
         public void Choose(int index)
         {
+            if (chosenCart1 == index || chosenCart2 == index)
+            {
+                chosenCart2 = null;
+                return; // Ne pas compter deux fois le même clic
+            }
+
+            // Incrémente le score ici
+            Score++;
+
             if (chosenCart1 == null)
             {
                 chosenCart1 = index;
             }
-            else if (chosenCart2 == null && index != chosenCart1)
+            else if (chosenCart2 == null)
             {
                 chosenCart2 = index;
             }
+
             CheckStatus();
         }
+
 
         public void CheckStatus()
         {
@@ -66,6 +81,7 @@ namespace Memory_WPF_OOP.Controllers
             else if (Cards[(int)chosenCart1] == Cards[(int)chosenCart2])
             {
                 status = "correct";
+                Score++;
             }
             else
             {

@@ -8,10 +8,36 @@
       d:DesignHeight="900" d:DesignWidth="1600"
       Title="Menu">
 
+    <Page.Resources>
+        <Storyboard x:Key="FlipCardStoryboard">
+            <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
+                             From="1" To="0" Duration="0:0:0.15" AutoReverse="True"/>
+        </Storyboard>
+        
+        <Storyboard x:Key="PairFoundAnimation">
+            <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
+                     From="1" To="1.1" Duration="0:0:0.2" AutoReverse="True"/>
+            <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"
+                     From="1" To="1.1" Duration="0:0:0.2" AutoReverse="True"/>
+        </Storyboard>
+
+    </Page.Resources>
+
     <Grid>
+
+        <TextBlock x:Name="scoreText"
+           Text="Score : 0"
+           FontSize="24"
+           Foreground="White"
+           HorizontalAlignment="Center"
+           VerticalAlignment="Top"
+           Margin="0,20,0,0"/>
+
         <UniformGrid x:Name="CardGrid" Rows="4" Columns="8" Margin="100,100,100,50" HorizontalAlignment="Center" VerticalAlignment="Top" Width="1000" Height="690"/>
         <Button x:Name="restartButton" Content="Restart" HorizontalAlignment="Left" Margin="698,800,0,0" VerticalAlignment="Top" Height="40" Width="85" Click="restartButton_Click"/>
         <TextBox x:Name="pseudoText" HorizontalAlignment="Left" Margin="821,800,0,0" Text="Pseudo" VerticalAlignment="Top" Width="140" Height="40" TextChanged="pseudoText_TextChanged" TextWrapping="Wrap"/>
         <Image x:Name="background" Source="/ChatGPT Image 10 avr. 2025, 15_16_54.png" Stretch="Fill" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Panel.ZIndex="-1"/>
+
     </Grid>
+    
 </Page>

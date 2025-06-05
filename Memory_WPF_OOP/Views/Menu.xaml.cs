@@ -10,6 +10,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -42,10 +43,18 @@ namespace Memory_WPF_OOP
             if (clickedButton.Content is Image img && !img.Source.ToString().Contains("CardBack.png"))
                 return;
 
-            game.Choose(index); // Choisir une carte
+            game.Choose(index);
+
+            scoreText.Text = $"Score : {game.Score}";
 
             string imageFileName = game.Cards[index];
             string imagePath = $"pack://application:,,,/Pictures/{imageFileName}";
+
+
+            Storyboard flipAnimation = (Storyboard)this.FindResource("FlipCardStoryboard");
+            flipAnimation.Begin(clickedButton);
+
+            await Task.Delay(150);
 
             Image image = new Image
             {
@@ -58,10 +67,17 @@ namespace Memory_WPF_OOP
             if (game.chosenCart1 != null && game.chosenCart2 != null)
             {
                 isChecking = true;
-                await Task.Delay(2500);
+                await Task.Delay(2000);
 
                 if (game.status == "wrong")
                 {
+
+                    Storyboard flipAnimationReverse = (Storyboard)this.FindResource("FlipCardStoryboard");
+                    flipAnimationReverse.Begin(cardButtons[game.chosenCart1.Value]);
+                    flipAnimationReverse.Begin(cardButtons[game.chosenCart2.Value]);
+
+                    await Task.Delay(150);
+
                     foreach (var i in new[] { game.chosenCart1.Value, game.chosenCart2.Value })
                     {
                         Image backImage = new Image
@@ -76,6 +92,8 @@ namespace Memory_WPF_OOP
                 isChecking = false;
             }
         }
+
+
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -108,12 +126,16 @@ namespace Memory_WPF_OOP
                 CardGrid.Children.Add(cardButton);
                 cardButton.Tag = i;
                 cardButtons.Add(cardButton);
+                cardButton.RenderTransformOrigin = new Point(0.5, 0.5);
+                cardButton.RenderTransform = new ScaleTransform(1, 1);
+
             }
         }
 
         private void restartButton_Click(object sender, RoutedEventArgs e)
         {
             game.Restart();
+            scoreText.Text = $"Score : {game.Score}";
 
             for (int i = 0; i < cardButtons.Count; i++)
             {
