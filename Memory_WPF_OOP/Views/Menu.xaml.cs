@@ -34,32 +34,37 @@ namespace Memory_WPF_OOP
 
         private async void Image_Click(object sender, RoutedEventArgs e)
         {
+            // Eviter pouvoir tourner plus de cartes pendant la comparaison d'images
             if (isChecking) return;
 
             Button clickedButton = sender as Button;
             int index = (int)clickedButton.Tag;
 
+            // Stoper la fonction si on clique sur la même carte plusieures fois de suite
             if (clickedButton.Content is Image img && !img.Source.ToString().Contains("CardBack.png"))
                 return;
 
-            game.Choose(index); // Choisir une carte
+            // Choisir une carte
+            game.Choose(index);
 
             string imageFileName = game.Cards[index];
             string imagePath = $"pack://application:,,,/Pictures/{imageFileName}";
 
+            // Montrer l'image de la carte choisie
             Image image = new Image
             {
                 Source = new BitmapImage(new Uri(imagePath)),
                 Stretch = Stretch.UniformToFill
             };
-
             clickedButton.Content = image;
 
+            // Comparaison entre les deux cartes si deux cartes ont été choisies
             if (game.chosenCart1 != null && game.chosenCart2 != null)
             {
                 isChecking = true;
-                await Task.Delay(2500);
+                await Task.Delay(1500);
 
+                // Retourner les cartes si elles ne sont pas correctes
                 if (game.status == "wrong")
                 {
                     foreach (var i in new[] { game.chosenCart1.Value, game.chosenCart2.Value })
@@ -88,6 +93,7 @@ namespace Memory_WPF_OOP
         }
         private void LoadGrid()
         {
+            // Donner de façon aléatoire une image à chaque carte entre les 32 images gardées
             cardButtons = new List<Button>();
             for (int i = 0; i < 32; i++)
             {
@@ -115,6 +121,7 @@ namespace Memory_WPF_OOP
         {
             game.Restart();
 
+            // Redonner des nouvelles images à toutes les cartes quand on recommence la partie
             for (int i = 0; i < cardButtons.Count; i++)
             {
                 var button = cardButtons[i];
