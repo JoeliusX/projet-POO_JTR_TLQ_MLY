@@ -58,28 +58,20 @@ namespace Memory_WPF_OOP
             if (clickedButton.Content is Image img && !img.Source.ToString().Contains("CardBack.png"))
                 return;
 
-<<<<<<< HEAD
             game.Choose(index);
 
             scoreText.Text = $"Score : {game.Score}";
-=======
             // Choisir une carte
-            game.Choose(index);
->>>>>>> 73a4ec4353e48a12df6d4ee209e19ad1816c189c
 
             string imageFileName = game.Cards[index];
             string imagePath = $"pack://application:,,,/Pictures/{imageFileName}";
-
-<<<<<<< HEAD
 
             Storyboard flipAnimation = (Storyboard)this.FindResource("FlipCardStoryboard");
             flipAnimation.Begin(clickedButton);
 
             await Task.Delay(150);
 
-=======
             // Montrer l'image de la carte choisie
->>>>>>> 73a4ec4353e48a12df6d4ee209e19ad1816c189c
             Image image = new Image
             {
                 Source = new BitmapImage(new Uri(imagePath)),
@@ -91,11 +83,7 @@ namespace Memory_WPF_OOP
             if (game.chosenCart1 != null && game.chosenCart2 != null)
             {
                 isChecking = true;
-<<<<<<< HEAD
-                await Task.Delay(2000);
-=======
                 await Task.Delay(1500);
->>>>>>> 73a4ec4353e48a12df6d4ee209e19ad1816c189c
 
                 // Retourner les cartes si elles ne sont pas correctes
                 if (game.status == "wrong")
@@ -132,8 +120,6 @@ namespace Memory_WPF_OOP
 
             }
         }
-
-
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -191,6 +177,7 @@ namespace Memory_WPF_OOP
                 button.Content = image;
                 button.IsEnabled = true;
             }
+            VictoryText.Visibility = Visibility.Collapsed;
         }
     }
 }
