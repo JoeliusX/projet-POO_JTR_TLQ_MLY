@@ -1,11 +1,11 @@
-﻿/*
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Data.Sqlite;
+using System.Data.SQLite;
 using System.IO;
+
 
 namespace Memory_WPF_OOP.Controllers
 {
@@ -27,7 +27,7 @@ namespace Memory_WPF_OOP.Controllers
             string dbPath = Path.Combine(baseDirectory, "CartUserBaseDeDonnees.db");
             connectionString = $"Data Source={dbPath}";
 
-            using (var connection = new SqliteConnection(connectionString))
+            using (var connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();
                 using (var command = connection.CreateCommand())
@@ -46,7 +46,7 @@ namespace Memory_WPF_OOP.Controllers
 
         public void InsertUser(string userName, int score = 0)
         {
-            using (var connection = new SqliteConnection(connectionString))
+            using (var connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();
                 using (var command = connection.CreateCommand())
@@ -67,7 +67,7 @@ namespace Memory_WPF_OOP.Controllers
         {
             var users = new List<User>();
 
-            using (var connection = new SqliteConnection(connectionString))
+            using (var connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();
                 using (var command = connection.CreateCommand())
@@ -92,4 +92,3 @@ namespace Memory_WPF_OOP.Controllers
         }
     }
 }
-*/
