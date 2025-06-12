@@ -64,6 +64,8 @@
 
         <UniformGrid x:Name="CardGrid" Rows="4" Columns="8" Margin="100,100,100,50" HorizontalAlignment="Center" VerticalAlignment="Top" Width="1000" Height="690"/>
         <Button x:Name="restartButton" Content="Restart" HorizontalAlignment="Left" Margin="698,800,0,0" VerticalAlignment="Top" Height="40" Width="85" Click="restartButton_Click"/>
+        <Button x:Name="BackgroundButton" Content="Change Background" HorizontalAlignment="Left" Margin="500,800,0,0" VerticalAlignment="Top" Height="40" Width="150" Click="BackgroundButton_Click"/>
+
         <TextBlock x:Name="pseudoText" FontSize="36" Foreground="White" HorizontalAlignment="Left" Margin="821,795,0,0" Text="Pseudo" VerticalAlignment="Top" Width="450" Height="40" TextWrapping="Wrap"/>
         <Image x:Name="background" Source="/ChatGPT Image 10 avr. 2025, 15_16_54.png" Stretch="Fill" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Panel.ZIndex="-1"/>
         <TextBlock x:Name="VictoryText" Text="Victoire !" FontSize="50" FontWeight="Bold" Foreground="Green" Background="White" Padding="20" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" Panel.ZIndex="10">
