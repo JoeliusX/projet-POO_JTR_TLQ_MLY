@@ -43,6 +43,77 @@ namespace Memory_WPF_OOP.Controllers
                 }
             }
         }
+        public User GetUserByName(string name)
+        {
+            using (var conn = new SQLiteConnection(connectionString))
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText =
+                        "SELECT Id, Nom, Score, RegistrationDate FROM Utilisateurs WHERE Nom = $nom;";
+                    cmd.Parameters.AddWithValue("$nom", name);
+
+                    using (var r = cmd.ExecuteReader())
+                    {
+                        if (r.Read())
+                        {
+                            return new User
+                            {
+                                Id = r.GetInt32(0),
+                                Nom = r.GetString(1),
+                                Score = r.GetInt32(2),
+                                RegistrationDate = DateTime.Parse(r.GetString(3))
+                            };
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+
+        public User CreateUser(string name, int score = 0)
+        {
+            using (var conn = new SQLiteConnection(connectionString))
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText =
+                        @"INSERT INTO Utilisateurs (Nom, Score, RegistrationDate)
+                          VALUES ($nom,$score,$date);
+                          SELECT last_insert_rowid();";
+                    cmd.Parameters.AddWithValue("$nom", name);
+                    cmd.Parameters.AddWithValue("$score", score);
+                    cmd.Parameters.AddWithValue("$date", DateTime.Now.ToString("s"));
+
+                    long id = (long)cmd.ExecuteScalar();
+
+                    return new User
+                    {
+                        Id = (int)id,
+                        Nom = name,
+                        Score = score,
+                        RegistrationDate = DateTime.Now
+                    };
+                }
+            }
+        }
+        public void UpdateScore(int userId, int newScore)
+        {
+            using (var conn = new SQLiteConnection(connectionString))
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText =
+                        "UPDATE Utilisateurs SET Score = $score WHERE Id = $id;";
+                    cmd.Parameters.AddWithValue("$score", newScore);
+                    cmd.Parameters.AddWithValue("$id", userId);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
 
         public void InsertUser(string userName, int score = 0)
         {
@@ -62,6 +133,7 @@ namespace Memory_WPF_OOP.Controllers
                 }
             }
         }
+
 
         public List<User> GetUsers()
         {

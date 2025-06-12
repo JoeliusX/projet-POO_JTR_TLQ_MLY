@@ -23,6 +23,8 @@ namespace Memory_WPF_OOP
     /// 
     public partial class Menu : Page
     {
+        private readonly DatabaseService db = new DatabaseService();
+        private User current;
         private Game game;
         private List<Button> cardButtons;
         private bool isChecking = false;
@@ -43,9 +45,11 @@ namespace Memory_WPF_OOP
             }
 
             pseudoText.Text = name;
+            current = db.GetUserByName(name) ?? db.CreateUser(name);
 
-            /*DatabaseService dbService = new DatabaseService();
-            dbService.InsertUser(name);*/
+            
+            if (current == null)
+                current = db.CreateUser(name);
 
             NameOverlay.Visibility = Visibility.Collapsed;
         }
