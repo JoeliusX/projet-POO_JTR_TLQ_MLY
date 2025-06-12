@@ -84,6 +84,10 @@ namespace Memory_WPF_OOP
             if (clickedButton.Content is Image img && !img.Source.ToString().Contains("CardBack.png"))
                 return;
 
+<<<<<<< HEAD
+=======
+            
+>>>>>>> 08b2a6f88ba335cbefbe0f7f6f8484d37b5eca9d
             // Choisir une carte
             game.Choose(index);
 
@@ -132,9 +136,14 @@ namespace Memory_WPF_OOP
                 if (game.Score > current.Score)
                 {
                     current.Score = game.Score;
+<<<<<<< HEAD
                     db.UpdateScore(current.Id, game.Score);
                 }
 
+=======
+                    db.UpdateScore(current.Id, current.Score);
+                }
+>>>>>>> 08b2a6f88ba335cbefbe0f7f6f8484d37b5eca9d
                 scoreText.Text = $"Score : {game.Score}";
                 game.ResetChoices();
                 isChecking = false;
@@ -232,6 +241,5 @@ namespace Memory_WPF_OOP
             currentBackgroundIndex = (currentBackgroundIndex + 1) % backgroundImages.Count;
             background.Source = new BitmapImage(new Uri(backgroundImages[currentBackgroundIndex], UriKind.Relative));
         }
-
     }
 }
