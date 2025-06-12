@@ -33,7 +33,15 @@ namespace Memory_WPF_OOP
             InitializeComponent();
             game = new Game();
             LoadGrid();
+            RefreshLeaderboard();
         }
+        private class LeaferItem 
+        {
+            public int Rank { get; set; }
+            public string Nom { get; set; }
+            public int Score { get; set; }
+        }
+
         // differents fonds d'écran
         private readonly List<string> backgroundImages = new List<string>
 {
@@ -143,6 +151,22 @@ namespace Memory_WPF_OOP
                 }
 
             }
+        }
+        private void RefreshLeaderboard()
+        {
+            List<User> top = db.GetTopUsers(10);
+            var sb = new StringBuilder();
+            sb.AppendLine("  #  Name        Score");
+            sb.AppendLine(" ─────────────┬─────");
+
+            int rank = 1;
+            foreach (var u in top)
+            {
+                sb.AppendLine($"{rank,3}  {u.Nom,-10}  {u.Score,5}");
+                rank++;
+            }
+
+            LeaderboardBox.Text = sb.ToString();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

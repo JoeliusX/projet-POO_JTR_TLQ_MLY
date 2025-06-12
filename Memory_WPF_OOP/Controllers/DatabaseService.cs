@@ -133,34 +133,34 @@ namespace Memory_WPF_OOP.Controllers
                 }
             }
         }
-
-
-        public List<User> GetUsers()
+        public List<User> GetTopUsers(int limit = 10)
         {
-            var users = new List<User>();
+            var list = new List<User>();
 
-            using (var connection = new SQLiteConnection(connectionString))
+            using (var conn = new SQLiteConnection(connectionString))
             {
-                connection.Open();
-                using (var command = connection.CreateCommand())
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
                 {
-                    command.CommandText = "SELECT Id, Nom, Score, RegistrationDate FROM Utilisateurs;";
-                    using (var reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            users.Add(new User
+                    cmd.CommandText = @"
+                SELECT Id, Nom, Score, RegistrationDate
+                FROM Utilisateurs
+                ORDER BY Score DESC, Nom ASC
+                LIMIT $lim;";
+                    cmd.Parameters.AddWithValue("$lim", limit);
+
+                    using (var r = cmd.ExecuteReader())
+                        while (r.Read())
+                            list.Add(new User
                             {
-                                Id = reader.GetInt32(0),
-                                Nom = reader.GetString(1),
-                                Score = reader.GetInt32(2),
-                                RegistrationDate = DateTime.Parse(reader.GetString(3))
+                                Id = r.GetInt32(0),
+                                Nom = r.GetString(1),
+                                Score = r.GetInt32(2),
+                                RegistrationDate = DateTime.Parse(r.GetString(3))
                             });
-                        }
-                    }
                 }
             }
-            return users;
+            return list;
         }
     }
 }

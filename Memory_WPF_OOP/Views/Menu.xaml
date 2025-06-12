@@ -53,6 +53,16 @@
     </Page.Resources>
 
     <Grid>
+        <TextBox x:Name="LeaderboardBox"
+             HorizontalAlignment="Left"
+             Margin="30,100,0,0"
+             VerticalAlignment="Top"
+             Width="192"
+             Height="690"
+             FontFamily="Consolas"
+             FontSize="14"
+             IsReadOnly="True"
+             TextWrapping="Wrap"/>
 
         <TextBlock x:Name="scoreText"
            Text="Score : 0"
