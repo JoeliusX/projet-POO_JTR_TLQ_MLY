@@ -91,6 +91,7 @@ namespace Memory_WPF_OOP.Controllers
                 status = "wrong";
             }
         }
+
         public void ResetChoices()
         {
             chosenCart1 = null;
