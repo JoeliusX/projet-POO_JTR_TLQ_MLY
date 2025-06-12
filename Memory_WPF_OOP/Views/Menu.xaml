@@ -8,18 +8,12 @@
       d:DesignHeight="900" d:DesignWidth="1600"
       Title="Menu">
 
+	<!-- Animation des cartes -->
     <Page.Resources>
         <Storyboard x:Key="FlipCardStoryboard">
             <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
                              From="1" To="0" Duration="0:0:0.15" AutoReverse="True"/>
-        </Storyboard>
-
-        <Storyboard x:Key="PairFoundAnimation">
-            <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
-                     From="1" To="1.1" Duration="0:0:0.2" AutoReverse="True"/>
-            <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"
-                     From="1" To="1.1" Duration="0:0:0.2" AutoReverse="True"/>
-        </Storyboard>
+        </Storyboard>      
 
         <!-- Style pour les boutons cartes avec effet lumière au survol -->
         <Style TargetType="Button" x:Key="CardButtonStyle">
@@ -53,31 +47,26 @@
     </Page.Resources>
 
     <Grid>
-        <TextBox x:Name="LeaderboardBox"
-             HorizontalAlignment="Left"
-             Margin="30,100,0,0"
-             VerticalAlignment="Top"
-             Width="192"
-             Height="690"
-             FontFamily="Consolas"
-             FontSize="14"
-             IsReadOnly="True"
-             TextWrapping="Wrap"/>
+		<!-- Liste des donnés -->
+		<Border Background="#80000080" CornerRadius="8" Padding="5" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,100,0,0">
+			<ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Background="Transparent" Width="192" MaxHeight="690">
+				<TextBlock x:Name="LeaderboardBox" FontFamily="Consolas" FontSize="14" Foreground="White" TextWrapping="Wrap"/>
+			</ScrollViewer>
+		</Border>
 
-        <TextBlock x:Name="scoreText"
-           Text="Score : 0"
-           FontSize="24"
-           Foreground="White"
-           HorizontalAlignment="Center"
-           VerticalAlignment="Top"
-           Margin="0,20,0,0"/>
+		<TextBlock x:Name="scoreText" Text="Score : 0" FontSize="24" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0"/>
 
         <UniformGrid x:Name="CardGrid" Rows="4" Columns="8" Margin="100,100,100,50" HorizontalAlignment="Center" VerticalAlignment="Top" Width="1000" Height="690"/>
         <Button x:Name="restartButton" Content="Restart" HorizontalAlignment="Left" Margin="698,800,0,0" VerticalAlignment="Top" Height="40" Width="85" Click="restartButton_Click"/>
         <Button x:Name="BackgroundButton" Content="Change Background" HorizontalAlignment="Left" Margin="500,800,0,0" VerticalAlignment="Top" Height="40" Width="150" Click="BackgroundButton_Click"/>
 
-        <TextBlock x:Name="pseudoText" FontSize="36" Foreground="White" HorizontalAlignment="Left" Margin="821,795,0,0" Text="Pseudo" VerticalAlignment="Top" Width="450" Height="40" TextWrapping="Wrap"/>
-        <Image x:Name="background" Source="/ChatGPT Image 10 avr. 2025, 15_16_54.png" Stretch="Fill" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Panel.ZIndex="-1"/>
+		<!-- Pseudo avec encadré -->
+		<Border Background="#4D000080" CornerRadius="8" Padding="5" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="821,795,0,0" Width="250" Height="50">
+			<TextBlock x:Name="pseudoText" Text="Pseudo" FontSize="24" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+		</Border>
+
+
+		<Image x:Name="background" Source="/ChatGPT Image 10 avr. 2025, 15_16_54.png" Stretch="Fill" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Panel.ZIndex="-1"/>
         <TextBlock x:Name="VictoryText" Text="Victoire !" FontSize="50" FontWeight="Bold" Foreground="Green" Background="White" Padding="20" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" Panel.ZIndex="10">
             <TextBlock.Effect>
                 <DropShadowEffect Color="Green" BlurRadius="10" ShadowDepth="0" Opacity="1"/>

@@ -84,14 +84,6 @@ namespace Memory_WPF_OOP
             if (clickedButton.Content is Image img && !img.Source.ToString().Contains("CardBack.png"))
                 return;
 
-            if (game.Score > current.Score)
-            {
-                current.Score = game.Score;
-                db.UpdateScore(current.Id, game.Score);
-            }
-
-            scoreText.Text = $"Score : {game.Score}";
-
             // Choisir une carte
             game.Choose(index);
 
@@ -137,6 +129,13 @@ namespace Memory_WPF_OOP
                         cardButtons[i].Content = backImage;
                     }
                 }
+                if (game.Score > current.Score)
+                {
+                    current.Score = game.Score;
+                    db.UpdateScore(current.Id, game.Score);
+                }
+
+                scoreText.Text = $"Score : {game.Score}";
                 game.ResetChoices();
                 isChecking = false;
 
