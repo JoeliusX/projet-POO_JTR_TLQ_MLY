@@ -34,6 +34,15 @@ namespace Memory_WPF_OOP
             game = new Game();
             LoadGrid();
         }
+        // differents fonds d'écran
+        private readonly List<string> backgroundImages = new List<string>
+{
+        "/ChatGPT Image 10 avr. 2025, 15_16_54.png",
+        "/e3867127-4eec-4261-8cef-161b51c19b87.png",
+        "/9f04cc4e-12cd-4c9f-8602-6dbc24c8bc2a.png"
+};
+        private int currentBackgroundIndex = 0;
+
 
         private void NameOverlayOkButton_Click(object sender, RoutedEventArgs e)
         {
@@ -188,5 +197,11 @@ namespace Memory_WPF_OOP
             }
             VictoryText.Visibility = Visibility.Collapsed;
         }
+        private void BackgroundButton_Click(object sender, RoutedEventArgs e)
+        {
+            currentBackgroundIndex = (currentBackgroundIndex + 1) % backgroundImages.Count;
+            background.Source = new BitmapImage(new Uri(backgroundImages[currentBackgroundIndex], UriKind.Relative));
+        }
+
     }
 }
