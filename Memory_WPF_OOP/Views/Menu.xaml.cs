@@ -39,7 +39,8 @@ namespace Memory_WPF_OOP
 {
         "/ChatGPT Image 10 avr. 2025, 15_16_54.png",
         "/e3867127-4eec-4261-8cef-161b51c19b87.png",
-        "/9f04cc4e-12cd-4c9f-8602-6dbc24c8bc2a.png"
+        "/9f04cc4e-12cd-4c9f-8602-6dbc24c8bc2a.png",
+        "/Copilot_20250605_163819.png"
 };
         private int currentBackgroundIndex = 0;
 
@@ -74,6 +75,12 @@ namespace Memory_WPF_OOP
             // Stoper la fonction si on clique sur la même carte plusieures fois de suite
             if (clickedButton.Content is Image img && !img.Source.ToString().Contains("CardBack.png"))
                 return;
+
+            if (game.Score > current.Score)
+            {
+                current.Score = game.Score;
+                db.UpdateScore(current.Id, game.Score);
+            }
 
             scoreText.Text = $"Score : {game.Score}";
 
@@ -157,7 +164,7 @@ namespace Memory_WPF_OOP
                     Margin = new Thickness(10),
                     VerticalContentAlignment = VerticalAlignment.Stretch,
                     HorizontalContentAlignment = HorizontalAlignment.Stretch,
-                    Style = (Style)FindResource("CardButtonStyle")  // ← ici on applique le style
+                    Style = (Style)FindResource("CardButtonStyle")  // Ici on applique le style
                 };
 
                 Image image = new Image

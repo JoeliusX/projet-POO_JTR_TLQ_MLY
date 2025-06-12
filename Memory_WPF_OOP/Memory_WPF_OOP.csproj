@@ -160,6 +160,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Resource Include="Copilot_20250605_163819.png" />
     <Resource Include="9f04cc4e-12cd-4c9f-8602-6dbc24c8bc2a.png" />
     <Resource Include="e3867127-4eec-4261-8cef-161b51c19b87.png" />
     <Resource Include="NamePage.png" />

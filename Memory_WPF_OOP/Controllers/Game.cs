@@ -59,9 +59,6 @@ namespace Memory_WPF_OOP.Controllers
                 return; // Ne pas compter deux fois le même clic
             }
 
-            // Incrémente le score ici
-            Score++;
-
             if (chosenCart1 == null)
             {
                 chosenCart1 = index;
@@ -84,11 +81,12 @@ namespace Memory_WPF_OOP.Controllers
             else if (Cards[(int)chosenCart1] == Cards[(int)chosenCart2])
             {
                 status = "correct";
-                Score++;
+                Score+=5;
             }
             else
             {
                 status = "wrong";
+                Score -= 1;
             }
         }
 
