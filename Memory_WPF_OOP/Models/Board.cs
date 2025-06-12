@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-using Microsoft.Data.Sqlite;
+using System.Data.SQLite;
 
 namespace Memory_WPF_OOP
 {
@@ -13,7 +13,7 @@ namespace Memory_WPF_OOP
             string dbPath = Path.Combine(baseDirectory, "CartUserBaseDeDonnees.db");
             string connectionString = $"Data Source={dbPath}";
 
-            using (var connection = new SqliteConnection(connectionString))
+            using (var connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();
 
