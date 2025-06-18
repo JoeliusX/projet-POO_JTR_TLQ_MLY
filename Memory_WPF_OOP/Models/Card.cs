@@ -20,14 +20,18 @@ namespace Memory_WPF_OOP.Models
         private readonly Storyboard flipAnimation;
         private readonly Storyboard flipAnimationReverse;
         private readonly TextBlock victoryText;
+        private readonly DatabaseService db;
+        private readonly Action refreshLeaderboard;
 
         public Card(Game game, List<Button> cardButtons, TextBlock scoreText, User current,
-            Storyboard flipAnimation, Storyboard flipAnimationReverse, TextBlock victoryText)
+            Storyboard flipAnimation, Storyboard flipAnimationReverse, TextBlock victoryText, DatabaseService db, Action refreshLeaderboard)
         {
             this.game = game;
             this.cardButtons = cardButtons;
             this.scoreText = scoreText;
             this.current = current;
+            this.db = db;
+            this.refreshLeaderboard = refreshLeaderboard;
             this.flipAnimation = flipAnimation;
             this.flipAnimationReverse = flipAnimationReverse;
             this.victoryText = victoryText;
@@ -90,6 +94,8 @@ namespace Memory_WPF_OOP.Models
                 if (game.Score > current.Score)
                 {
                     current.Score = game.Score;
+                    db.UpdateScore(current.Id, current.Score);
+                    refreshLeaderboard();
                 }
 
                 scoreText.Text = $"Score : {game.Score}";
